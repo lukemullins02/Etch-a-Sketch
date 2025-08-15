@@ -1,22 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: blue;
 }
 
 .container {
   display: flex;
-  flex-direction: row;
-  background-color: #bfbfbf;
-}
-
-.column {
-  height: auto;
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-self: center;
+  width: 600px;
 }
 
 .row {
-  flex: 1;
+  border: 1px solid black;
+  height: (100%/16);
+  width: (100%/16);
 }
