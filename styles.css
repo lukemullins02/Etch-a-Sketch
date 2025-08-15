@@ -10,7 +10,7 @@ body {
 #newGrid {
   display: flex;
   justify-self: center;
-  background-color: red;
+
   margin-top: 20px;
 }
 

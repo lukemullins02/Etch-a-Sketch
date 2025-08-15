@@ -12,6 +12,14 @@ function numOfDivs(num) {
       container.appendChild(row);
     }
   }
+  let changeRow = document.querySelectorAll(".row");
+
+  changeRow.forEach((row) => {
+    row.addEventListener("mousemove", () => {
+      let randomColor = getRandomColor();
+      row.style.backgroundColor = randomColor;
+    });
+  });
 }
 
 let def = 16;
@@ -23,7 +31,7 @@ function gridSize() {
   if (Number.isNaN(num)) {
     alert("Please enter a number.");
   } else if (num > 100) {
-    alert("Please enter a number less than 100.");
+    alert("Please enter a number less than or equal to 100.");
   } else if (num <= 0) {
     alert("Please enter a number greater than 0.");
   } else {
@@ -34,6 +42,14 @@ function gridSize() {
     }
     numOfDivs(num);
   }
+}
+
+function getRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+
+  return `rgb(${r},${g},${b})`;
 }
 
 btn.addEventListener("click", () => {
