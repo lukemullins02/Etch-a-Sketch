@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 const btn = document.querySelector("#newGrid");
+const resetBtn = document.querySelector("#reset");
 
 function numOfDivs(num) {
   let size = container.clientWidth / num;
@@ -18,6 +19,12 @@ function numOfDivs(num) {
     row.addEventListener("mousemove", () => {
       let randomColor = getRandomColor();
       row.style.backgroundColor = randomColor;
+    });
+  });
+
+  resetBtn.addEventListener("click", () => {
+    changeRow.forEach((row) => {
+      row.style.backgroundColor = "#b6b6b6";
     });
   });
 }
